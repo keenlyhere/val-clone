@@ -1,0 +1,174 @@
+body {
+    background-color: #e9e4dd;
+    color: #f9f9f9;
+    font-family: "FF Mark W05", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::after, ::before {
+    box-sizing: border-box;
+}
+
+.play-now-button {
+    background-image: linear-gradient(to right, #eb4d4d, #ee7d6a);
+    color: #111111;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 17px 11px 17px;
+    border: none;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    background-color: #111111;
+    border-bottom: 2px solid rgba(51, 51, 51, .25);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "riot-logo val-logo links . . . . . . . . . . . . . . . globe-play";
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    width: 100%
+}
+
+.logo-switch {
+    grid-area: riot-logo;
+    padding-left: 36px;
+    display: flex;
+}
+
+.riot-logo {
+    height: 24px;
+}
+
+.val-logo {
+    grid-area: val-logo;
+    margin-left: 22px;
+    height: 24px;
+    display: flex;
+}
+
+.links {
+    grid-area: links;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.navbar__right {
+    grid-area: globe-play;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 38px;
+}
+
+.game-info, .support, .socials {
+    display: flex;
+    align-items: center;
+}
+
+.diagonal-arrow {
+    height: 12px;
+}
+
+.esports {
+    display: flex;
+}
+
+.main {
+    /* background-image: url(/images/killjoy.jpeg); */
+    height: 491px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.video-container {
+    position: relative;
+    height: 100%;
+    z-index: -1;
+
+}
+
+.tagline {
+    color: #e9e4dd;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.369);
+    z-index: 1;
+}
+
+.valorant {
+    padding-top: 44px;
+    padding-bottom: 59px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.236));
+    z-index: 1;
+}
+
+.play-free-button {
+    background-color: #fd3c4d;
+    color: #e9e0da;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 17px 11px 17px;
+    border: none;
+    letter-spacing: 1px;
+    margin: 7px;
+    width: 246px;
+    height: 54px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.play-free-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #111111;
+}
+
+.play-free-container {
+    width: 246px;
+    height: 69px;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.play-free-container::before, .play-free-container::after{
+    position: absolute;
+    left: 0;
+    width: calc(100% + 0.8rem);
+    border: 1px solid rgba(236, 232, 225, .5);
+    content: "";
+    display: block;
+    height: calc(50% - 5px);
+}
+
+.play-free-container::before {
+    top: 0;
+    border-bottom: 0;
+}
+
+.play-free-container::after {
+    bottom: 0;
+    border-top: 0;
+}
